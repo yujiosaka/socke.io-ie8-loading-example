@@ -9,7 +9,7 @@
     var socket = io.connect('http://localhost:4000');
     socket.on('connect', function() {
       i = 0;
-      setInterval(function() {
+      setTimeout(function() {
         socket.emit('cnt', i++);
       }, 1000);
     });
